@@ -6,5 +6,5 @@
 ## Features
 * separate requirements.txt for the development environment
 * pip package caching
-* pre-installed VS Code extensions: 
+* VS Code extensions: 
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
