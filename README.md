@@ -10,3 +10,4 @@ Collection of ready-to-use devcontainer configurations.
 ## Configurations
 
 * ### [python](https://github.com/DrKarambit/devcontainer-collection/tree/main/python/.devcontainer)
+* ### [jupyter](https://github.com/DrKarambit/devcontainer-collection/tree/main/jupyter/.devcontainer)
