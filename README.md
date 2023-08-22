@@ -11,3 +11,4 @@ Collection of ready-to-use devcontainer configurations.
 
 * ### [python](https://github.com/DrKarambit/devcontainer-collection/tree/main/python/.devcontainer)
 * ### [jupyter](https://github.com/DrKarambit/devcontainer-collection/tree/main/jupyter/.devcontainer)
+* ### [machine-learning](https://github.com/DrKarambit/devcontainer-collection/tree/main/machine-learning/.devcontainer)

@@ -1,0 +1,35 @@
+// Format details:
+// https://containers.dev/implementors/json_reference/
+{
+	"name": "machine-learning",
+
+	// Use existing Docker images:
+	// https://hub.docker.com/search?q=
+	"image": "tensorflow/tensorflow:latest-gpu",
+
+	// Set environment variables:
+    // https://code.visualstudio.com/remote/advancedcontainers/environment-variables
+	"containerEnv": {
+		"PIP_CACHE_DIR": ".devcontainer/.cache/pip",
+		"REQUIREMENTS_TXT_PATH": ".devcontainer/requirements.txt"
+	},
+
+	// Run commands after the container is built:
+	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
+	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE_DIR --upgrade pip && pip3 install --cache-dir=$PIP_CACHE_DIR -r $REQUIREMENTS_TXT_PATH",
+
+	// Configure tool-specific properties:
+	// https://containers.dev/supporting
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+
+	// Array of Docker CLI arguments that should be used when running the container:
+	// https://docs.docker.com/engine/reference/commandline/run/
+	"runArgs": ["--gpus=all"]
+}
