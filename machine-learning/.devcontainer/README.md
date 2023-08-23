@@ -19,3 +19,6 @@
 * VS Code extensions: 
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
     * [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+## Size
+~12 GB
