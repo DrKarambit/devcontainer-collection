@@ -1,0 +1,9 @@
+// Format details:
+// https://containers.dev/implementors/json_reference/
+{
+	"name": "node",
+
+	// Use existing Docker images:
+	// https://hub.docker.com/search?q=
+	"image": "node:latest"
+}
