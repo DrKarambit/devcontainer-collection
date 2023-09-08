@@ -5,7 +5,7 @@
 
 ## Features
 * GPU support
-* separate requirements.txt for the development environment
+* Separate requirements.txt for the development environment
 * pip package caching
 * pip packages:
     * [Jupyter Notebook](https://jupyter.org/)

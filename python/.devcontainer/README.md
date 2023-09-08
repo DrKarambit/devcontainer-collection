@@ -4,7 +4,7 @@
 [python:latest](https://hub.docker.com/_/python)
 
 ## Features
-* separate requirements.txt for the development environment
+* Separate requirements.txt for the development environment
 * pip package caching
 * VS Code extensions: 
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)

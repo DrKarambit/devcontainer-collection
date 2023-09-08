@@ -8,15 +8,15 @@
 	"image": "python:latest",
 
 	// Set environment variables:
-    // https://code.visualstudio.com/remote/advancedcontainers/environment-variables
+	// https://code.visualstudio.com/remote/advancedcontainers/environment-variables
 	"containerEnv": {
-		"PIP_CACHE_DIR": ".devcontainer/.cache/pip",
-		"REQUIREMENTS_TXT_PATH": ".devcontainer/requirements.txt"
+		"REQUIREMENTS_TXT": ".devcontainer/requirements.txt",
+		"PIP_CACHE": ".devcontainer/.cache/pip"
 	},
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE_DIR --upgrade pip && pip3 install --cache-dir=$PIP_CACHE_DIR -r $REQUIREMENTS_TXT_PATH",
+	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE --upgrade pip && pip3 install --cache-dir=$PIP_CACHE -r $REQUIREMENTS_TXT",
 
 	// Configure tool-specific properties:
 	// https://containers.dev/supporting
