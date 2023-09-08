@@ -1,0 +1,6 @@
+notebook
+torch
+transformers
+accelerate
+einops
+sentencepiece

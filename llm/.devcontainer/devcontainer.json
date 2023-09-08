@@ -1,0 +1,36 @@
+// Format details:
+// https://containers.dev/implementors/json_reference/
+{
+	"name": "llm",
+
+	// Use existing Docker images:
+	// https://hub.docker.com/search?q=
+	"image": "python:3.10",
+
+	// Set environment variables:
+	// https://code.visualstudio.com/remote/advancedcontainers/environment-variables
+	"containerEnv": {
+		"REQUIREMENTS_TXT": ".devcontainer/requirements.txt",
+		"PIP_CACHE": ".devcontainer/.cache/pip",
+		"HF_HOME": "${containerWorkspaceFolder}/.devcontainer/.cache/huggingface"
+	},
+
+	// Run commands after the container is built:
+	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
+	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE --upgrade pip && pip3 install --cache-dir=$PIP_CACHE -r $REQUIREMENTS_TXT",
+
+	// Configure tool-specific properties:
+	// https://containers.dev/supporting
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+
+	// Array of Docker CLI arguments that should be used when running the container:
+	// https://docs.docker.com/engine/reference/commandline/run/
+	"runArgs": ["--gpus=all"]
+}
