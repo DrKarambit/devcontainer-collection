@@ -9,9 +9,9 @@ Collection of ready-to-use devcontainer configurations.
 
 ## Configurations
 
-* ### [python](https://github.com/DrKarambit/devcontainer-collection/tree/main/python/.devcontainer)
-* ### [jupyter](https://github.com/DrKarambit/devcontainer-collection/tree/main/jupyter/.devcontainer)
-* ### [machine-learning](https://github.com/DrKarambit/devcontainer-collection/tree/main/machine-learning/.devcontainer)
-* ### [anaconda](https://github.com/DrKarambit/devcontainer-collection/tree/main/anaconda/.devcontainer)
-* ### [node](https://github.com/DrKarambit/devcontainer-collection/tree/main/node/.devcontainer)
-* ### [llm](https://github.com/DrKarambit/devcontainer-collection/tree/main/llm/.devcontainer)
+* ### [python](https://github.com/alkenderesi/devcontainer-collection/tree/main/python/.devcontainer)
+* ### [jupyter](https://github.com/alkenderesi/devcontainer-collection/tree/main/jupyter/.devcontainer)
+* ### [machine-learning](https://github.com/alkenderesi/devcontainer-collection/tree/main/machine-learning/.devcontainer)
+* ### [anaconda](https://github.com/alkenderesi/devcontainer-collection/tree/main/anaconda/.devcontainer)
+* ### [node](https://github.com/alkenderesi/devcontainer-collection/tree/main/node/.devcontainer)
+* ### [llm](https://github.com/alkenderesi/devcontainer-collection/tree/main/llm/.devcontainer)
