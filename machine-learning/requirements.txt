@@ -1,7 +1,9 @@
 notebook
+ipywidgets
 numpy
+kaggle
 pandas
 matplotlib
-opencv-python
 scikit-learn
 torch
+fastai

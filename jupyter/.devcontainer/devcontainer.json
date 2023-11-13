@@ -5,18 +5,11 @@
 
 	// Use existing Docker images:
 	// https://hub.docker.com/search?q=
-	"image": "python:latest",
-
-	// Set environment variables:
-	// https://code.visualstudio.com/remote/advancedcontainers/environment-variables
-	"containerEnv": {
-		"REQUIREMENTS_TXT": ".devcontainer/requirements.txt",
-		"PIP_CACHE": ".devcontainer/.cache/pip"
-	},
+	"image": "python:3.11",
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE --upgrade pip && pip3 install --cache-dir=$PIP_CACHE -r $REQUIREMENTS_TXT",
+	"postCreateCommand": "pip3 install --cache-dir=.devcontainer/.cache/pip -r requirements.txt",
 
 	// Configure tool-specific properties:
 	// https://containers.dev/supporting
@@ -24,6 +17,7 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
+				"ms-python.black-formatter",
 				"ms-toolsai.jupyter"
 			]
 		}

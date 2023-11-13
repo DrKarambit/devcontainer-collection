@@ -5,19 +5,21 @@
 
 	// Use existing Docker images:
 	// https://hub.docker.com/search?q=
-	"image": "python:3.10",
+	"image": "python:3.11",
 
 	// Set environment variables:
 	// https://code.visualstudio.com/remote/advancedcontainers/environment-variables
 	"containerEnv": {
-		"REQUIREMENTS_TXT": ".devcontainer/requirements.txt",
-		"PIP_CACHE": ".devcontainer/.cache/pip",
 		"HF_HOME": "${containerWorkspaceFolder}/.devcontainer/.cache/huggingface"
 	},
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "pip3 install --cache-dir=$PIP_CACHE --upgrade pip && pip3 install --cache-dir=$PIP_CACHE -r $REQUIREMENTS_TXT",
+	"postCreateCommand": "pip3 install --cache-dir=.devcontainer/.cache/pip -r requirements.txt",
+
+	// Docker run arguments:
+	// https://docs.docker.com/engine/reference/commandline/run/
+	"runArgs": ["--gpus=all"],
 
 	// Configure tool-specific properties:
 	// https://containers.dev/supporting
@@ -25,12 +27,9 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
+				"ms-python.black-formatter",
 				"ms-toolsai.jupyter"
 			]
 		}
-	},
-
-	// Array of Docker CLI arguments that should be used when running the container:
-	// https://docs.docker.com/engine/reference/commandline/run/
-	"runArgs": ["--gpus=all"]
+	}
 }
