@@ -6,6 +6,7 @@
 # https://manpages.ubuntu.com/manpages/jammy/man1/setfacl.1.html
 chown -R `whoami` .
 chmod -R a+rw .
+apt update && apt install -y acl
 setfacl -d -m u::rw .
 setfacl -d -m g::rw .
 setfacl -d -m o::rw .
