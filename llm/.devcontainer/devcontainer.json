@@ -15,7 +15,7 @@
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "chmod +x .devcontainer/setup.sh && ./$_",
+	"postCreateCommand": "chmod +x .devcontainer/setup.sh && ./.devcontainer/setup.sh",
 
 	// Docker run arguments:
 	// https://docs.docker.com/engine/reference/commandline/run/
