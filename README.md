@@ -16,29 +16,8 @@ Check out these sources:
 4. Customize the configuration to further fit your use case.
 
 
-## Permissions on Linux
-Almost every container uses the `root` user by default. To prevent any sort of file accessing issues related to permissions while using devcontainers you must run the following commands:
-
-```bash
-chmod -R a+rw your/project/path
-```
-```bash
-setfacl -d -m u::rw your/project/path
-```
-```bash
-setfacl -d -m g::rw your/project/path
-```
-```bash
-setfacl -d -m o::rw your/project/path
-```
-
-Files and directories within "your/project/path" will have full read and write permissions (rw-rw-rw-), including new files created after running the commands.
-Windows + WSL users don't have to deal with this.
-
-
 ## GPU support on Linux
 If you want to use `--gpus=all` on Linux, follow the resources below:
-* [Install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
 * [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 * [Installing Docker and The Docker Utility Engine for NVIDIA GPUs](https://docs.nvidia.com/ai-enterprise/deployment-guide-vmware/0.1.0/docker.html)
 * [NVIDIA drivers installation](https://ubuntu.com/server/docs/nvidia-drivers-installation)
@@ -49,4 +28,4 @@ Note: Docker Desktop + NVIDIA Container Toolkit is not supported on Linux until 
 
 
 ## GPU support on Windows
-Download and install the latest NVIDIA driver from the official website.
+Download and install the latest NVIDIA driver from the official website, no additional setup required. Works with both Docker Desktop and Docker Engine.

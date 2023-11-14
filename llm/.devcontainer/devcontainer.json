@@ -15,7 +15,7 @@
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "pip3 install --cache-dir=.devcontainer/.cache/pip -r requirements.txt",
+	"postCreateCommand": "chmod +x .devcontainer/setup.sh && ./$_",
 
 	// Docker run arguments:
 	// https://docs.docker.com/engine/reference/commandline/run/

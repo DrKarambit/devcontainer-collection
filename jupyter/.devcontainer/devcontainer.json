@@ -9,7 +9,7 @@
 
 	// Run commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
-	"postCreateCommand": "pip3 install --cache-dir=.devcontainer/.cache/pip -r requirements.txt",
+	"postCreateCommand": "chmod +x .devcontainer/setup.sh && ./$_",
 
 	// Configure tool-specific properties:
 	// https://containers.dev/supporting
