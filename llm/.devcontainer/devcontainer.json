@@ -3,17 +3,17 @@
 {
 	"name": "llm",
 
-	// Use existing Docker images:
+	// Docker image:
 	// https://hub.docker.com/search?q=
 	"image": "python:3.11",
 
-	// Set environment variables:
+	// Environment variables:
 	// https://code.visualstudio.com/remote/advancedcontainers/environment-variables
 	"containerEnv": {
 		"HF_HOME": "${containerWorkspaceFolder}/.devcontainer/.cache/huggingface"
 	},
 
-	// Run commands after the container is built:
+	// Commands after the container is built:
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
 	"postCreateCommand": ". .devcontainer/setup.sh",
 
@@ -21,7 +21,7 @@
 	// https://docs.docker.com/engine/reference/commandline/run/
 	"runArgs": ["--gpus=all"],
 
-	// Configure tool-specific properties:
+	// Tool-specific properties:
 	// https://containers.dev/supporting
 	"customizations": {
 		"vscode": {
