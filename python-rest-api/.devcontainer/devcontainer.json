@@ -1,0 +1,29 @@
+// Format details:
+// https://containers.dev/implementors/json_reference/
+{
+	"name": "python",
+
+	// Docker Compose specific properties:
+	// https://containers.dev/implementors/json_reference/#compose-specific
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "user-api",
+	"shutdownAction": "none",
+	"workspaceFolder": "/workspace",
+
+	// Commands after the container is built:
+	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
+	"postCreateCommand": ". .devcontainer/setup.sh",
+
+	// Tool-specific properties:
+	// https://containers.dev/supporting
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-python.pylint",
+				"github.copilot"
+			]
+		}
+	}
+}
